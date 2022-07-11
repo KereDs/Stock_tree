@@ -33,6 +33,7 @@ for x in ta_list:
     data = pd.merge(data, pd.DataFrame(output), left_on = data.index, right_on = output.index)
     data = data.set_index('key_0')
     
+data = data.dropna()
 pred_day=10
 
 #預測漲跌
